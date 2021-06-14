@@ -8,7 +8,7 @@ while true do
     for k,v in pairs(foundPlayers) do
         local pos = detector.getPlayerPos(v)
         local w, h = monitor.getSize()
-        monitor.setCursorPos(w, h)
+        monitor.setCursorPos(-w, -h)
         monitor.write(v .." - x" .. pos.x .. " y" .. pos.y .. " z" .. pos.z)
     end
     sleep(1)
