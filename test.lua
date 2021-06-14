@@ -2,13 +2,14 @@ detector = peripheral.wrap("left")
 monitor = peripheral.wrap("top")
 detectRange = 750
 
+monitor.setBackgroundColor(colors.black)
+monitor.setTextColor(colors.white)
+monitor.setCursorBlink(false)
 
 while true do
     local foundPlayers = detector.getPlayersInRange(detectRange)
     local h = 1
     monitor.clear()
-    monitor.setTextColor(colors.white)
-    monitor.setBackgroundColor(colors.black)
     for k,v in pairs(foundPlayers) do
         local pos = detector.getPlayerPos(v)
         monitor.setCursorPos(1, h)
